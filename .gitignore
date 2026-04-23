@@ -1,0 +1,6 @@
+# Output files are personal, don't commit them
+Output/
+
+# OS
+.DS_Store
+Thumbs.db
