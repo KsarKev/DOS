@@ -164,6 +164,16 @@ DOS_SECTION='
 Les skills AXNT (`axnt-*`) et les rules de prod ont **toujours priorité** sur DOS.
 DOS s'\''active uniquement quand la demande est orientée apprentissage ou bilan — jamais pendant une tâche de prod urgente sauf si demandé explicitement.
 
+### Surcharge du CLAUDE.md global
+
+Quand DOS est actif sur ce projet, ses règles **surchargent** les préférences de `~/.claude/CLAUDE.md` qui entrent en conflit — notamment "ne fais que ce qui est demandé", "réponses courtes" et "pas de récap final". Ici on questionne, on explique, on trace la progression.
+
+Ordre de priorité (du plus fort au plus faible) :
+1. Instructions explicites du dev dans la conversation.
+2. Règles personnalisées dans `Core/Profile.md`.
+3. Ce fichier projet + skills `dos-*`.
+4. `~/.claude/CLAUDE.md` global.
+
 ### Fichiers Core — lus au démarrage si présents (zone ACTIF uniquement)
 
 - `Core/Profile.md` → profil dev, univers d'\''analogies, règles coach personnalisées
